@@ -10,7 +10,19 @@ console.log(minValueCallback([64, 25, 49, 9, 100], Math.sqrt));  // 3
 
 *******************************************************************************/
 
-let minValueCallback = function() {
+let minValueCallback = function (array, cb) {
+    let smallest = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+        if (smallest > array[i]) {
+            smallest = array[i]
+        }
+    }
+    if (cb) {
+        return cb(smallest)
+    }
+    else return smallest;
+
 
 };
 

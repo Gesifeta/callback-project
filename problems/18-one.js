@@ -37,8 +37,14 @@ let result6 = one(['apple', 'dog', 'food', 'cat'], function(el, idx) {
 console.log(result6);   // true
 *******************************************************************************/
 
-let one = function() {
-
+let one = function (array, callback) {
+    let countTrue = 0;
+    for (let j = 0; j < array.length; j++) {
+        if (callback(array[j], j)) {
+            countTrue++;
+        }
+    }
+    return countTrue === 1;
 };
 
 

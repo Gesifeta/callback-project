@@ -21,7 +21,13 @@ console.log(myEvery(['book', 'door'], hasO));           // true
 console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
 *******************************************************************************/
 
-let myEvery = function() {
+let myEvery = function (array, cb) {
+    for (let j = 0; j < array.length; j++) {
+        if (!cb(array[j])) {
+            return false
+        }
+    }
+    return true;
 
 };
 

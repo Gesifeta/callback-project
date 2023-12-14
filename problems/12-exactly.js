@@ -27,7 +27,14 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
+let exactly = function (array, num, cb) {
+    let count = 0;
+    for (let j = 0; j < array.length; j++) {
+        if (cb(array[j])) {
+            count++
+        }
+    }
+    return count === num
 
 };
 

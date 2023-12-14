@@ -28,8 +28,13 @@ let result4 = none([4, -5, 7, -1], function(n) {
 console.log(result4);   // false
 *******************************************************************************/
 
-let none = function() {
-
+let none = function (arr, callback) {
+    for (let j = 0; j < arr.length; j++) {
+        if (callback(arr[j])) {
+            return false
+        }
+    }
+    return true;
 };
 
 
