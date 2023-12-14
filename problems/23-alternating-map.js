@@ -51,7 +51,26 @@ let alternatingMap = function (arr, callback1, callback2) {
 };
 
 
+let triple = function (n) {
+    return 3 * n;
+};
 
+let half = function (n) {
+    return n / 2;
+};
+console.log(alternatingMap([7, 3, 2, 9, 8], triple, half));
+// [ 21, 1.5, 6, 4.5, 24 ]
+
+
+let yell = function (s) {
+    return s.toUpperCase() + '!';
+};
+
+let whisper = function (s) {
+    return '..' + s.toLowerCase() + '..';
+};
+console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper));
+// [ 'HEY!', '..everyone..', 'WHATS!', '..up??..' ]
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = alternatingMap;

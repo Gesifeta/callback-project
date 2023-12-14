@@ -26,16 +26,13 @@ console.log(result3); // hi!!!!!
 
 
 let multiMap = function (val, n, cb) {
-  let nuw = ''
-  for (let i = 0; i < 5; i++) {
-    nuw + cb(val)
+  let result = val;
+  for (let i = 0; i < n; i++) {
+    result = result + cb(val)
   }
-  return nuw;
+  return result;
 };
-let result3 = multiMap("hi", 5, function (s) {
-  return s + "!";
-});
-console.log(result3); // hi!!!!!
+
 
 
 
